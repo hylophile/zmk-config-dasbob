@@ -1,0 +1,22 @@
+FROM docker.io/zmkfirmware/zmk-build-arm:stable
+
+WORKDIR /app
+RUN git clone https://github.com/zmkfirmware/zmk.git
+
+WORKDIR /app/zmk
+RUN west init --local app
+RUN west update
+
+WORKDIR /app/zmk/app
+COPY ./config /app/config
+
+ARG zmk_board
+ARG zmk_shield
+RUN west build \
+  --board ${zmk_board} \
+  -- \
+  -DSHIELD=${zmk_shield} \
+  -DZMK_CONFIG=/app/config \
+  -DZMK_EXTRA_MODULES=/app/config/zmk-helpers-repo
+
+ENTRYPOINT ["bash"]
