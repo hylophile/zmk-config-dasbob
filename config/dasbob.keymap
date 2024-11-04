@@ -2,6 +2,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <zmk-helpers/helper.h>
 #include <zmk-helpers/key-labels/36.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define QUICK_TAP_MS 175
 #define THUMB_QUICK_TAP_MS 250
@@ -263,12 +265,12 @@ ___             &kp N1          &kp N2          &kp N3          ___             
             
         lay {
             bindings = <
-___             ___             ___             ___             ___                     ___             ___             ___             ___             ___     
-___             ___             ___             ___             ___                     ___             &compose_ue     &compose_ae     &compose_oe     &compose_sz
-___             ___             ___             ___             ___                     ___             &compose_ue     &compose_ae     &compose_oe     &compose_sz
-                                ___             ___             ___                     ___             ___             ___
+___             ___             ___             &bt BT_SEL 2    &bt BT_SEL 3            ___             ___             ___             ___             ___     
+&bootloader     ___             &bt BT_SEL 0    &bt BT_SEL 1    &out OUT_USB            ___             &compose_ue     &compose_ae     &compose_oe     &compose_sz
+&sys_reset      ___             ___             ___             &out OUT_BLE            ___             &compose_ue     &compose_ae     &compose_oe     &compose_sz
+
+                                ___             ___             ___                     ___             &bt BT_CLR      &bt BT_CLR_ALL
             >;
         };
-
     };
 };

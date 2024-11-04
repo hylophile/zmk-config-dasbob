@@ -6,6 +6,7 @@ RUN git clone https://github.com/zmkfirmware/zmk.git
 WORKDIR /app/zmk
 RUN west init --local app
 RUN west update
+RUN west zephyr-export
 
 WORKDIR /app/zmk/app
 COPY ./config /app/config

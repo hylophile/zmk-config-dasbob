@@ -2,7 +2,7 @@ default:
     @just --list --unsorted
 
 keyboard := "dasbob"
-automounted_as := "TODO" # TODO
+automounted_as := "NICENANO"
 export zmk_board := "nice_nano_v2"
 export zmk_shield := "dasbob_left"
 flash_target_dir := "/run/media" / env('USER') / automounted_as
