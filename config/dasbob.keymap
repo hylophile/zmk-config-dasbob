@@ -92,6 +92,7 @@ ZMK_BEHAVIOR(qexcl, mod_morph,
 
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
+MAKE_HRM(hmr_c, &kp, &comma_morph, KEYS_L THUMBS)  // right-hand HRMs
 
 
 // reuse basic mod-morph scheme
@@ -221,8 +222,8 @@ behaviors {
             bindings = <
 
 &kp Q           &kp W           &kp F           &kp P           &kp B                   &kp J           &kp L           &kp U           &kp Y           &kp APOS
-&hml LGUI A     &hml LALT R     &hml LSHIFT S   &hml LCTRL T    &kp G                   &kp M           &hmr RCTRL N    &hmr RSHIFT E   &hmr LALT I     &hmr LGUI O   
-&kp Z           &kp X           &kp C           &kp D           &kp V                   &kp K           &kp H           &comma_morph    &dot_morph      &qexcl  
+&kp A           &hml LALT R     &hml LSHIFT S   &hml LCTRL T    &kp G                   &kp M           &hmr RCTRL N    &hmr RSHIFT E   &hmr LALT I     &kp O   
+&kp Z           &kp X           &hml LGUI C     &kp D           &kp V                   &kp K           &kp H           &hmr_c LGUI 0   &dot_morph      &qexcl  
                                 &thb LAY TAB    &lt_bspc NAV 0  &thb FUN ESC            &thb NUM RET    &lt_spc SYM 0   &smart_shft    
             >;
         };
