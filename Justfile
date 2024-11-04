@@ -11,7 +11,7 @@ nametag := zmk_shield + "_firmware"
 # build firmware and flash it
 flash: build
     #!/usr/bin/env bash
-    set -euxo pipefail
+    set -euo pipefail
     printf "Flashing: Looking for '{{ flash_target_dir }}'."
     for i in {1..30}
     do
