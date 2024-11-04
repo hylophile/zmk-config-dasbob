@@ -221,7 +221,7 @@ behaviors {
             bindings = <
 
 &kp Q           &kp W           &kp F           &kp P           &kp B                   &kp J           &kp L           &kp U           &kp Y           &kp APOS
-&kp A           &hml LALT R     &hml LSHIFT S   &hml LCTRL T    &hml LGUI G             &hmr LGUI M     &hmr RCTRL N    &hmr RSHIFT E   &hmr LALT I     &kp O   
+&hml LGUI A     &hml LALT R     &hml LSHIFT S   &hml LCTRL T    &kp G                   &kp M           &hmr RCTRL N    &hmr RSHIFT E   &hmr LALT I     &hmr LGUI O   
 &kp Z           &kp X           &kp C           &kp D           &kp V                   &kp K           &kp H           &comma_morph    &dot_morph      &qexcl  
                                 &thb LAY TAB    &lt_bspc NAV 0  &thb FUN ESC            &thb NUM RET    &lt_spc SYM 0   &smart_shft    
             >;
